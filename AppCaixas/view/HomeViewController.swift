@@ -9,21 +9,28 @@ import UIKit
 
 class HomeViewController: UIViewController {
     static let identifier = "HomeViewController"
+    @IBOutlet weak var boxesTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "teste"
-        // Do any additional setup after loading the view.
+        boxesTable.register(UINib(nibName: BoxesViewCell.identifier, bundle: nil), forCellReuseIdentifier: BoxesViewCell.identifier)
+        boxesTable.dataSource = self
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+extension HomeViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BoxesViewCell.identifier, for: indexPath) as? BoxesViewCell else { fatalError("dasdasb")}
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    
+    
+}
+
