@@ -16,6 +16,8 @@
 		0096259527B198EF00B682D9 /* AppCaixasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096259427B198EF00B682D9 /* AppCaixasUITestsLaunchTests.swift */; };
 		009625A427B199A300B682D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009625A227B199A300B682D9 /* HomeViewController.swift */; };
 		009625A527B199A300B682D9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009625A327B199A300B682D9 /* HomeViewController.xib */; };
+		009625A927B28C3E00B682D9 /* BoxesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009625A727B28C3E00B682D9 /* BoxesViewCell.swift */; };
+		009625AA27B28C3E00B682D9 /* BoxesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009625A827B28C3E00B682D9 /* BoxesViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0096259427B198EF00B682D9 /* AppCaixasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCaixasUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		009625A227B199A300B682D9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		009625A327B199A300B682D9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		009625A727B28C3E00B682D9 /* BoxesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxesViewCell.swift; sourceTree = "<group>"; };
+		009625A827B28C3E00B682D9 /* BoxesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxesViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +133,20 @@
 		009625A127B1998000B682D9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				009625A627B28C1300B682D9 /* components */,
 				009625A227B199A300B682D9 /* HomeViewController.swift */,
 				009625A327B199A300B682D9 /* HomeViewController.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		009625A627B28C1300B682D9 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				009625A727B28C3E00B682D9 /* BoxesViewCell.swift */,
+				009625A827B28C3E00B682D9 /* BoxesViewCell.xib */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,7 @@
 			files = (
 				0096257E27B198EF00B682D9 /* LaunchScreen.storyboard in Resources */,
 				0096257B27B198EF00B682D9 /* Assets.xcassets in Resources */,
+				009625AA27B28C3E00B682D9 /* BoxesViewCell.xib in Resources */,
 				009625A527B199A300B682D9 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +283,7 @@
 			files = (
 				0096257227B198ED00B682D9 /* AppDelegate.swift in Sources */,
 				0096257427B198ED00B682D9 /* SceneDelegate.swift in Sources */,
+				009625A927B28C3E00B682D9 /* BoxesViewCell.swift in Sources */,
 				009625A427B199A300B682D9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
