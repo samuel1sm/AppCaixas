@@ -6,31 +6,29 @@
 //
 
 import UIKit
-
+import RxSwift
+import RxCocoa
 class HomeViewController: UIViewController {
     static let identifier = "HomeViewController"
+    let viewModel = BoxCellViewModel()
+    let disposeBag = DisposeBag()
     @IBOutlet weak var boxesTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "teste"
+        configureTable()
+    }
+    
+    func configureTable(){
         boxesTable.register(UINib(nibName: BoxesViewCell.identifier, bundle: nil), forCellReuseIdentifier: BoxesViewCell.identifier)
-        boxesTable.dataSource = self
-    }
 
-}
-
-extension HomeViewController : UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: BoxesViewCell.identifier, for: indexPath) as? BoxesViewCell else { fatalError("dasdasb")}
         
-        return cell
+        viewModel.data.bind(to: boxesTable.rx.items(cellIdentifier: BoxesViewCell.identifier, cellType: BoxesViewCell.self))
+        { row,data,cell in
+            cell.configureCell(boxCellModel: data)
+        }.disposed(by: disposeBag)
+        
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
-    }
-    
-    
-    
-}
 
+}

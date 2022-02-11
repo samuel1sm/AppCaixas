@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +21,6 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gae-eh-P3I">
                                 <rect key="frame" x="0.0" y="1.5" width="64" height="61.5"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="2Ps-9D-cjF"/>
                                     <constraint firstAttribute="width" constant="64" id="ZAS-Yg-9cC"/>
@@ -69,13 +67,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="boxImage" destination="Gae-eh-P3I" id="gV4-Hw-79I"/>
+                <outlet property="ruleLabel" destination="IQL-20-hCh" id="cd7-sr-PUy"/>
+                <outlet property="titleLabel" destination="rdb-48-RCA" id="WkA-Wn-lYC"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="105.80357142857143"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="person.2" catalog="system" width="128" height="81"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

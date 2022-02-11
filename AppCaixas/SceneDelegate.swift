@@ -10,28 +10,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    var appCoordinator: AppCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        self.window = UIWindow(windowScene: scene)
-        let navigationController = UINavigationController()
-        let home = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
-        navigationController.viewControllers = [home]
-        navigationController.navigationBar.backgroundColor = .gray
-        self.window!.frame = UIScreen.main.bounds
-        self.window!.rootViewController = navigationController
-        self.window!.makeKeyAndVisible()
-    
-        
-        //               let gitService = GitService()
-        //               let filterService = FilterService()
-        //
-        //               appCoordinator = AppCoordinator(navigationController: navigationController, window: window,
-        //                                               gitService: gitService,
-        //                                               filterService: filterService)
-        //               appCoordinator.start()
-        
+        let window = UIWindow(windowScene: scene)
+        appCoordinator = AppCoordinator(window: window)
+        appCoordinator?.start()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
