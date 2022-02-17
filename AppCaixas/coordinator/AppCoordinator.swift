@@ -8,14 +8,14 @@
 import UIKit
 
 class AppCoordinator {
-    
+
     private let window: UIWindow
 
-    init(window: UIWindow){
+    init(window: UIWindow) {
         self.window = window
     }
-    
-    func start(){
+
+    func start() {
         let navigationController = UINavigationController()
         let home = HomeViewController(nibName: HomeViewController.identifier, bundle: nil)
         navigationController.viewControllers = [home]

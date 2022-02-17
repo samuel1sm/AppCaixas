@@ -8,17 +8,17 @@
 import Foundation
 
 struct BoxCellModel {
-    let imageUrl : String
-    let boxType : BoxType
-    
-    func getBoxInfos() -> BoxInfos{
+    let imageUrl: String
+    let boxType: BoxType
+
+    func getBoxInfos() -> BoxInfos {
         return BoxType.getBoxInfo(type: boxType)
     }
 }
 
-struct BoxInfos{
-    let boxName : String
-    let boxLiquidity : String
+struct BoxInfos {
+    let boxName: String
+    let boxLiquidity: String
 }
 
 enum BoxType {
@@ -31,7 +31,7 @@ enum BoxType {
 }
 
 extension BoxType {
-    static func getBoxInfo(type : BoxType) -> BoxInfos{
+    static func getBoxInfo(type: BoxType) -> BoxInfos {
         switch type {
         case .reserva :
             return BoxInfos(boxName: "Reserva de Emegencia", boxLiquidity: "Imediato")
@@ -45,7 +45,7 @@ extension BoxType {
             return BoxInfos(boxName: "Protecao", boxLiquidity: "sem tempo")
         case .previdencia:
             return BoxInfos(boxName: "Previdencia", boxLiquidity: "10 anos")
-        
+
         }
     }
 }

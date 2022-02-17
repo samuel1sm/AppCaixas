@@ -12,17 +12,20 @@ class HomeViewController: UIViewController {
     static let identifier = "HomeViewController"
     let viewModel = BoxCellViewModel()
     let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "teste"
 //        configureTable()
+
     }
-    
+
 //    func configureTable(){
-//        boxesTable.register(UINib(nibName: BoxesViewCell.identifier, bundle: nil), forCellReuseIdentifier: BoxesViewCell.identifier)
+//        boxesTable.register(UINib(nibName: BoxesViewCell.identifier, bundle: nil),
+//                              forCellReuseIdentifier: BoxesViewCell.identifier)
 //
-//        viewModel.data.bind(to: boxesTable.rx.items(cellIdentifier: BoxesViewCell.identifier, cellType: BoxesViewCell.self))
+//        viewModel.data.bind(to: boxesTable.rx.items(cellIdentifier: BoxesViewCell.identifier,
+//        cellType: BoxesViewCell.self))
 //        { row,data,cell in
 //            cell.configureCell(boxCellModel: data)
 //        }.disposed(by: disposeBag)

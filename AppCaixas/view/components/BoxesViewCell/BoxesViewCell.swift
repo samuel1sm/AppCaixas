@@ -12,7 +12,7 @@ class BoxesViewCell: UITableViewCell {
     @IBOutlet var boxImage: UIImageView!
     @IBOutlet var ruleLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,13 +20,13 @@ class BoxesViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
     }
-    
-    func configureCell(boxCellModel : BoxCellModel){
+
+    func configureCell(boxCellModel: BoxCellModel) {
         boxImage.image =  UIImage(systemName: boxCellModel.imageUrl)
         ruleLabel.text = boxCellModel.getBoxInfos().boxLiquidity
         titleLabel.text = boxCellModel.getBoxInfos().boxName
     }
-    
+
 }
