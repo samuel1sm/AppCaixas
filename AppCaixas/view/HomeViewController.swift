@@ -11,13 +11,18 @@ import RxCocoa
 class HomeViewController: UIViewController {
     static let identifier = "HomeViewController"
     let viewModel = BoxCellViewModel()
+    @IBOutlet var boxScrollView: CardsScrollView!
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "teste"
-//        configureTable()
+        fetchConections()
 
+    }
+
+    func fetchConections() {
+        viewModel.data.bind {self.boxScrollView.loadCards(cards: $0)}.disposed(by: disposeBag)
     }
 
 //    func configureTable(){

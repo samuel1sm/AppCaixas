@@ -16,11 +16,16 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         standartInit()
+        configureBorders()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         standartInit()
+    }
+
+    func configureBorders() {
+        self.cornerRadius = 20
     }
 
     func standartInit() {
@@ -30,7 +35,11 @@ class CardView: UIView {
 
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-     //   view.backgroundColor = .clear
         addSubview(view)
+    }
+
+    func configureCard(data: CardCellModel) {
+        textLabel.text = data.getBoxInfos().boxName
+        cardImage.image = UIImage(systemName: data.imageUrl)
     }
 }
