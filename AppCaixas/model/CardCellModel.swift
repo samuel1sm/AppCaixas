@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BoxCellModel {
+struct CardCellModel {
     let imageUrl: String
     let boxType: BoxType
 

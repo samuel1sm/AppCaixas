@@ -23,7 +23,7 @@ class BoxesViewCell: UITableViewCell {
 
     }
 
-    func configureCell(boxCellModel: BoxCellModel) {
+    func configureCell(boxCellModel: CardCellModel) {
         boxImage.image =  UIImage(systemName: boxCellModel.imageUrl)
         ruleLabel.text = boxCellModel.getBoxInfos().boxLiquidity
         titleLabel.text = boxCellModel.getBoxInfos().boxName
