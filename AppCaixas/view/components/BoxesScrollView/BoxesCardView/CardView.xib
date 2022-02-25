@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +19,10 @@
             <rect key="frame" x="0.0" y="0.0" width="148" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dasdasd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfZ-d5-VUs" customClass="PaddingLabel" customModule="AppCaixas" customModuleProvider="target">
-                    <rect key="frame" x="16" y="16" width="116" height="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfZ-d5-VUs" customClass="PaddingLabel" customModule="AppCaixas" customModuleProvider="target">
+                    <rect key="frame" x="16" y="16" width="116" height="25"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14798575677278916" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -43,22 +43,21 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eri-mJ-0Aw">
-                    <rect key="frame" x="16" y="52.5" width="116" height="115"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="beige_box" translatesAutoresizingMaskIntoConstraints="NO" id="eri-mJ-0Aw">
+                    <rect key="frame" x="16" y="52" width="116" height="116"/>
                     <color key="tintColor" systemColor="systemRedColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="E9t-GZ-s6o"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="116" id="fFX-bT-ub2"/>
+                        <constraint firstAttribute="width" secondItem="eri-mJ-0Aw" secondAttribute="height" multiplier="1:1" id="xPH-PO-X3W"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.32549019607843138" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WfZ-d5-VUs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Aj4-Wk-SiC"/>
+                <constraint firstItem="eri-mJ-0Aw" firstAttribute="top" secondItem="WfZ-d5-VUs" secondAttribute="bottom" constant="11" id="DR0-Og-RWT"/>
                 <constraint firstItem="eri-mJ-0Aw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="DuE-2M-Lpt"/>
                 <constraint firstItem="eri-mJ-0Aw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Jmf-qR-YsE"/>
                 <constraint firstAttribute="trailing" secondItem="WfZ-d5-VUs" secondAttribute="trailing" constant="16" id="NCq-5q-tof"/>
-                <constraint firstItem="eri-mJ-0Aw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WfZ-d5-VUs" secondAttribute="bottom" constant="20" id="P9f-F2-Q7M"/>
                 <constraint firstAttribute="trailing" secondItem="eri-mJ-0Aw" secondAttribute="trailing" constant="16" id="TQ5-yn-pc6"/>
                 <constraint firstItem="WfZ-d5-VUs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="eyz-q4-4bL"/>
                 <constraint firstItem="eri-mJ-0Aw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jER-by-IVp"/>
@@ -77,11 +76,11 @@
     </objects>
     <designables>
         <designable name="WfZ-d5-VUs">
-            <size key="intrinsicContentSize" width="89" height="28.5"/>
+            <size key="intrinsicContentSize" width="53" height="25"/>
         </designable>
     </designables>
     <resources>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="beige_box" width="1646" height="1882"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

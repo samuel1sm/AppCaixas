@@ -12,12 +12,12 @@ class BoxCellViewModel {
     let data: Observable<[CardCellModel]>
 
     init() {
-        data = Observable.just([CardCellModel(imageUrl: "person.2", boxType: .reserva),
-                                CardCellModel(imageUrl: "trash.fill", boxType: .creditoPrivado),
-                                CardCellModel(imageUrl: "trash.fill", boxType: .multimercados),
-                                CardCellModel(imageUrl: "trash.fill", boxType: .fundoDeAcoes),
-                                CardCellModel(imageUrl: "trash.fill", boxType: .protecao),
-                                CardCellModel(imageUrl: "trash.fill", boxType: .previdencia)])
+        data = Observable.just([CardCellModel(boxType: .reserva),
+                                CardCellModel(boxType: .creditoPrivado),
+                                CardCellModel(boxType: .multimercados),
+                                CardCellModel(boxType: .fundoDeAcoes),
+                                CardCellModel(boxType: .protecao),
+                                CardCellModel(boxType: .previdencia)])
 
     }
 
