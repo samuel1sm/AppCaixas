@@ -40,6 +40,6 @@ class CardView: UIView {
 
     func configureCard(data: CardCellModel) {
         textLabel.text = data.getBoxInfos().boxName
-        cardImage.image = UIImage(systemName: data.imageUrl)
+        cardImage.image = UIImage(named: data.imageUrl)
     }
 }
