@@ -13,6 +13,8 @@
 		0051B9F627CFEB4600A609FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0051B9F527CFEB4600A609FB /* FirebaseAuth */; };
 		0051B9F827CFEB4600A609FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0051B9F727CFEB4600A609FB /* FirebaseFirestore */; };
 		0051B9FC27CFF19200A609FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0051B9FB27CFF19200A609FB /* GoogleService-Info.plist */; };
+		0051BA0127D0002500A609FB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051B9FF27D0002400A609FB /* RegisterViewController.swift */; };
+		0051BA0227D0002500A609FB /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0051BA0027D0002400A609FB /* RegisterViewController.xib */; };
 		0051F6A427B4348B008B5870 /* CardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051F6A327B4348B008B5870 /* CardCellModel.swift */; };
 		0051F6A727B44161008B5870 /* BoxCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051F6A627B44161008B5870 /* BoxCellViewModel.swift */; };
 		0051F6AA27B4456F008B5870 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051F6A927B4456F008B5870 /* Constants.swift */; };
@@ -59,6 +61,8 @@
 		0051B9F027CFE4BC00A609FB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		0051B9F127CFE4BC00A609FB /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		0051B9FB27CFF19200A609FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0051B9FF27D0002400A609FB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0051BA0027D0002400A609FB /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		0051F6A327B4348B008B5870 /* CardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellModel.swift; sourceTree = "<group>"; };
 		0051F6A627B44161008B5870 /* BoxCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCellViewModel.swift; sourceTree = "<group>"; };
 		0051F6A927B4456F008B5870 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		0051B9ED27CFE45E00A609FB /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0051B9FE27D0000400A609FB /* Register */,
 				0051B9EF27CFE48000A609FB /* FirstScreen */,
 				0051B9EE27CFE46E00A609FB /* Home */,
 			);
@@ -139,6 +144,15 @@
 				0051B9F127CFE4BC00A609FB /* FirstViewController.xib */,
 			);
 			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		0051B9FE27D0000400A609FB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				0051B9FF27D0002400A609FB /* RegisterViewController.swift */,
+				0051BA0027D0002400A609FB /* RegisterViewController.xib */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		0051F6A527B44143008B5870 /* viewModel */ = {
@@ -404,6 +418,7 @@
 				0096257B27B198EF00B682D9 /* Assets.xcassets in Resources */,
 				0039D9FE27BAE53F004FA9F6 /* CardView.xib in Resources */,
 				009625AA27B28C3E00B682D9 /* BoxesViewCell.xib in Resources */,
+				0051BA0227D0002500A609FB /* RegisterViewController.xib in Resources */,
 				0051B9F327CFE4BC00A609FB /* FirstViewController.xib in Resources */,
 				009625A527B199A300B682D9 /* HomeViewController.xib in Resources */,
 				0051B9FC27CFF19200A609FB /* GoogleService-Info.plist in Resources */,
@@ -461,6 +476,7 @@
 				009625A927B28C3E00B682D9 /* BoxesViewCell.swift in Sources */,
 				00A80ADA27BC418F0035F31D /* CardsScrollView.swift in Sources */,
 				0051F6A427B4348B008B5870 /* CardCellModel.swift in Sources */,
+				0051BA0127D0002500A609FB /* RegisterViewController.swift in Sources */,
 				0089E35A27B6E2D5001518FB /* CardView.swift in Sources */,
 				009625A427B199A300B682D9 /* HomeViewController.swift in Sources */,
 				0051B9F227CFE4BC00A609FB /* FirstViewController.swift in Sources */,
